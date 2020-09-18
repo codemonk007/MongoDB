@@ -1,0 +1,26 @@
+aggregate needs an array as argument
+then we have the stages
+_____________________________
+db.person.aggregate([
+{$match:{age:{$gt:35}}}
+])
+
+_______________________________
+
+db.person.aggregate([
+{$match:{isActive:true}}])
+
+
+______________________________
+
+db.person.aggregate([
+{$match:{tags:{$size:3}}}])
+
+____________________________
+
+we can do the same using find operator
+
+
+db.person.find({tags:{$size:3}})
+
+so we can say that the find query is similar to maggregate with a match

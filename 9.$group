@@ -1,0 +1,9 @@
+{$group :{_id :"$age"}}
+
+{$group :{_id :{age:"$age",gender:"$gender"}}}
+
+
+Group perform grouping on the basis of certain fields
+
+
+

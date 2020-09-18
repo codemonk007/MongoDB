@@ -1,0 +1,75 @@
+Cenrallised workflow-
+________________________
+
+No branches in this case
+
+So if we change the same file and same file the. We get the error
+
+Git pull —rebase origin master. —It will always have the initial commit and add my commit on top of that
+
+So it will show the file where we have the error
+
+Git status.  Shows where the conflict is
+
+Then open git merge tool
+
+
+Git mergetool
+
+Merge. The cha gets manually and then continue rebase continue
+
+
+Git rebase —continue
+
+
+
+Git push origin master
+
+___________________________________
+
+
+When we have feature branch workflow-
+
+
+All features develop t happens on feature branch not the master branch
+
+
+Feature branch workflow-s
+
+Creating a feature branch
+
+
+Git branch feature 1
+
+Git checkout feature1
+
+Then create file
+Add it to staging
+Commit
+Git push origin feature1
+
+
+And we need to open a pull request
+
+Base master and compare to feature
+
+And then anyone can merge with the master branch
+
+_______________________
+
+checkout only if we have made some changes and revert them 
+We can use git checkout file name changes are gone
+
+We can also use the command git revert commit id and the changes are gone
+
+_________________
+
+So we know girt checkout git revert git reset
+
+
+
+
+
+
+
+

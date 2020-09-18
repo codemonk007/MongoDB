@@ -1,0 +1,106 @@
+db.person.aggregate([
+{$group:{_id:"$age"}}
+])
+
+_______________________________
+db.person.aggregate([
+{$group:{_id:"$gender"}}
+])
+
+
+The expression needs to be kept in string""
+
+_________________________________
+
+db.person.aggregate([
+{$group:{_id:"$age"}}
+])
+
+{ $match: { "isActive" : true, } },
+   { $group: { _id: "$age", total: { $sum: "$age" } } }
+{ $limit: 2 }
+
+
+
+{
+  $group: {
+    _id: null, 
+    total: {
+      $sum: "$amount"
+    }
+  }
+}
+
+
+
+
+
+{
+  $group: {
+    _id: null, 
+    total: {
+      $sum: "$amount"
+    }
+  }
+}
+
+> db.transactions.aggregate([
+  { 
+    $match: {
+      transactionDate: {
+        $gte: ISODate("2017-01-01T00:00:00.000Z"),
+        $lt: ISODate("2017-01-31T23:59:59.000Z")
+      }    
+    }
+  }, {
+    $group: {
+      _id: null,
+      total: {
+        $sum: "$amount"
+      },
+      average_transaction_amount: {
+        $avg: "$amount"
+      },
+      min_transaction_amount: {
+        $min: "$amount"
+      },
+      max_transaction_amount: {
+        $max: "$amount"
+      }
+    }
+  }
+]);
+
+
+
+
+
+> db.transactions.aggregate([
+  { 
+    $match: {
+      transactionDate: {
+        $gte: ISODate("2017-01-01T00:00:00.000Z"),
+        $lt: ISODate("2017-01-31T23:59:59.000Z")
+      }    
+    }
+  }, {
+    $group: {
+      _id: null,
+      total: {
+        $sum: "$amount"
+      },
+      average_transaction_amount: {
+        $avg: "$amount"
+      },
+      min_transaction_amount: {
+        $min: "$amount"
+      },
+      max_transaction_amount: {
+        $max: "$amount"
+      }
+    }
+  }
+]);
+db.getCollection('employee').aggregate([{ $project : {age:1}}])
+
+{ $project : {age:1}}

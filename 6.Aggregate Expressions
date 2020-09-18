@@ -1,0 +1,10 @@
+Aggregate expressions refer to the field of the input documents
+
+"$fieldname"
+
+____________________
+
+{$group:{Id:"$stage"}}
+{$group:{_id:"$company.location.country"}}
+{$group:{_id:"$name",total:{$sum:"#price"}}}
+

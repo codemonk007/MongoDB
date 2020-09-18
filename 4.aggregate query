@@ -1,0 +1,6 @@
+db.person.aggregate([])-- it will return the cursor
+
+
+which is same as if we use
+
+db.person.find({})--empty query

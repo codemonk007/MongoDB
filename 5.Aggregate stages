@@ -1,0 +1,29 @@
+Each stage works independent
+
+Takes the document performs operationa and the return the documents
+
+Result of one stage passed to another.
+___________________________________
+
+{$match :{age:{$gt:20}}}
+db.getCollection('employee').find({"age":{$gt:38}})
+db.getCollection('employee').aggregate([{$match :{age:{$gt:38}}}])
+
+
+
+{$group:{_id :"$age"}}
+
+{$sort:{count:-1}}
+db.getCollection('employee').aggregate([{$sort:{age:-1}}])
+db.getCollection('employee').find({}).sort({"age":-1})
+
+____________________________
+
+$match
+$group
+$sort
+$skip
+$project
+$count
+$limit
+$out
