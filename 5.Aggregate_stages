@@ -1,0 +1,15 @@
+Each stage works independent
+
+Takes the document performs operationa and the return the documents
+
+Result of one stage passed to another.
+
+mainly we can use 
+$match
+$group
+$sort
+$skip
+$project
+$count
+$limit
+$out
